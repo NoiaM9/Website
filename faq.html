@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Întrebări frecvente</title>
+    <link rel="stylesheet" type="text/css" href="faq.xsl">
+</head>
+<body>
+    <div id="faq-list">
+        <!-- Aici va fi afișat conținutul XML formatat cu ajutorul fișierului XSL -->
+    </div>
+
+    <script>
+        // Funcție pentru a încărca și afișa întrebările frecvente din XML folosind XSLT
+        function loadFAQs() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    displayFAQs(this);
+                }
+            };
+            xhttp.open("GET", "faq.xml", true);
+            xhttp.setRequestHeader("Content-type", "text/xml");
+            xhttp.send();
+        }
+
+        // Funcție pentru afișarea întrebărilor frecvente folosind XSLT
+        function displayFAQs(xml) {
+    var xsltProcessor = new XSLTProcessor();
+    var xslDoc = new XMLHttpRequest();
+    xslDoc.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            xsltProcessor.importStylesheet(this.responseXML);
+            
+            var parser = new DOMParser();
+            var xmlDoc = parser.parseFromString(xml.responseText, "text/xml");
+            
+            var resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
+            document.getElementById("faq-list").appendChild(resultDocument);
+        }
+    };
+    xslDoc.open("GET", "faq.xsl", true);
+    xslDoc.send();
+}
+
+
+        // Apelarea funcției pentru a încărca și afișa întrebările frecvente
+        loadFAQs();
+    </script>
+</body>
+</html>

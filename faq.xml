@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faqs>
+    <faq>
+        <question>Câte tipuri de salate vindeți?</question>
+        <answer>Noi vindem trei tipuri de salate: Salată de pui, Salată de peste și Salată de pui cu spanac.</answer>
+    </faq>
+    <faq>
+        <question>Care sunt ingredientele din Salata de pui?</question>
+        <answer>Salata de pui conține 500 g piept de pui, 500 g rosii, 4 castraveti, 2 cepe rosii, 1 ardei gras, salata verde, 3 linguri ulei floarea soarelui, 6 linguri ulei de masline extravirgin.</answer>
+    </faq>
+    <faq>
+        <question>Cât costă o Salată de pui?</question>
+        <answer>Prețul unei Salate de pui proaspete este de 22 lei.</answer>
+    </faq>
+    <faq>
+        <question>Există opțiuni vegetariene pentru salate?</question>
+        <answer>Da, Salata de spanac  este o opțiune vegetariană, făcându-se exclusiv din legume proaspete și dressing opțional.</answer>
+    </faq>
+    <faq>
+        <question>Care sunt salatele cu prețul sub 20 de lei și cu puține calorii?</question>
+        <answer>
+            Avem două salate care îndeplinesc aceste criterii:
+            <ul>
+                <li>Salată cu peste, dressing de iaurt (17 lei, 150 calorii)</li>
+                <li>Salată cu spanac cu roșii cherry (11 lei, 180 calorii)</li>
+            </ul>
+        </answer>
+    </faq>
+    
+    <salads>
+        <salad>
+            <name>Salată Caesar</name>
+            <price>18</price>
+            <calories>250</calories>
+        </salad>
+        <salad>
+            <name>Salată de legume proaspete</name>
+            <price>15</price>
+            <calories>230</calories>
+        </salad>
+        <salad>
+            <name>Salată de pui cu avocado</name>
+            <price>22</price>
+            <calories>200</calories>
+        </salad>
+        <salad>
+            <name>Salată verde cu dressing de iaurt</name>
+            <price>16</price>
+            <calories>150</calories>
+        </salad>
+        <salad>
+            <name>Salată de ton cu roșii cherry</name>
+            <price>18</price>
+            <calories>180</calories>
+        </salad>
+    </salads>
+</faqs>
